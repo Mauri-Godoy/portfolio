@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    border: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+section, header {
+    height: 100vh;
+    border-style: solid;
+    border-color: black;
+    border-width: 0 0 3px 0;
+    margin: 0;
+    background-color: violet;
+}
+
+
+/* header */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+nav {
+    background-color: green;
+    position: absolute;
+    top: 3rem;
+    width: 70%;
+
+}
+
+nav ul {
+    display: flex;
+    margin: 0;
+    justify-content: space-around;
+}
+
+main header h1 {
+    font-size: 3rem;
+    background-color: red;
+}
+
+mmain header h2 {
+    font-size: 2rem;
+    background-color: blue;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/* about */
+#about, #projects {
+    grid-template-columns: 1fr 1fr;
+    background-color: green;
+    margin: 0;
+    padding: 0;
+    display: grid;
+}
+
+#about div img {
+    width: 80%;
+    position: relative;
+    top: 0;
+}
+
+/* projects */
+#projects div .project {
+    width: 50%;
+    height: 50%;
+    border: solid 2px black;
+}
+
+/* footer */
+
+main footer {
+    height: 50vh;
+    background-color: olive;
+}
+
+/* vectores */
+
+.vector {
+    width: 50%;
+    top: 40vh;
+    position: absolute;
+    right: 0;
+}
+
+.vector-footer {
+    width: 50%;
+    top: 294.4vh;
+    position: absolute;
+    background-color: red;
+    z-index: 100;
+}
+
+
+
+@media (max-width: 640px) {
+    section, header {
+        height: 50vh;
+    }
+
+    main footer {
+        height: 25vh;
+    }
+
+    .vector-footer {
+        width: 50%;
+        top: 152vh }
+}
