@@ -4,15 +4,19 @@
 :root {
     --color-primary: #33312E;
     --color-secundary: #17A398;
+    --font-xl: 3.5rem;
+    --font-md: 3rem;
+    --font-s: 2rem;
+    --font-xs: 1.5rem;
+    --height-screen: 100vh;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     color: var(--color-primary);
-    font-size: 1.5rem;
+    font-size: var(--font-xs);
     font-weight: 500;
-    width: 100vw;
     overflow-x: hidden;
     padding: 0;
 }
@@ -22,16 +26,12 @@ main {
     margin: 0;
     display: flex;
     flex-direction: column;
-  
+
 }
 
 section, header {
-    height: 100vh;
-    border-style: solid;
-    border-color: black;
-    border-width: 0 0 3px 0;
+    height: var(--height-screen);
     margin: 0;
-    background-color: green;
 }
 
 
@@ -44,11 +44,9 @@ header {
 }
 
 nav {
-    background-color: green;
     position: absolute;
     top: 3rem;
-    width: 70%;
-
+    width: 100%;
 }
 
 nav ul {
@@ -62,23 +60,21 @@ nav li:hover {
     transition: ease-in-out .5s;
 }
 
-nav a:hover{
+nav a:hover {
     color: #33312ed2;
 }
 
 main header h1 {
-    font-size: 3.5rem;
-    background-color: red;
+    font-size: var(--font-xl);
     margin: 0;
 }
 
 mmain header h2 {
-    font-size: 2rem;
-    background-color: blue;
+    font-size: var(--font-s);
 }
 
 main header #subtitulo {
-    font-size: 3rem;
+    font-size: var(--font-md);
     letter-spacing: .25rem;
     color: var(--color-secundary);
 }
@@ -87,19 +83,17 @@ a {
     text-decoration: none;
     color: var(--color-primary);
     margin: 0;
-    background-color: pink;
+    outline: none;
 }
 
 li {
     list-style: none;
     margin: 0;
-    background-color: yellow;
 }
 
 /* about */
 #about, #projects {
     grid-template-columns: 1fr 1fr;
-    background-color: green;
     margin: 0;
     padding: 0;
     display: grid;
@@ -115,7 +109,7 @@ li {
 #about div img {
     width: 50%;
     position: absolute;
-    bottom: -100.6vh;
+    bottom: -var(--height-screen);
     margin: 0;
     right: 1rem;
 }
@@ -127,27 +121,79 @@ li {
     justify-content: center;
     align-items: center;
 }
+
 #projects div .project {
-    width: 50%;
-    height: 50%;
-    border: solid 2px black;
+    width: 80%;
+    height: 80%;
 }
 
+div .project img {
+    width: 100%;
+    border: solid var(--color-primary) 3px;
+    border-radius: 5px;
+}
+
+div .project img:hover {
+    transform: scale(1.05);
+    transition: ease-in-out .5s;
+}
 
 /* footer */
 
 main footer {
-    height: 50vh;
-    background-color: gray;
+    height: var(--height-screen);
     width: 100%;
 }
 
 main footer ul {
     display: flex;
-    justify-content: space-between;
-    background-color: red;
+    justify-content: space-around;
     padding: 1rem;
-    margin: 1rem;
+    margin: 3rem;
+}
+
+footer form {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+
+input, textarea, button {
+    margin-bottom: 3rem;
+    background: none;
+    color: var(--color-primary);
+    padding: 1rem;
+    outline: none;
+    border: solid var(--color-primary) 3px;
+}
+
+footer form button {
+    cursor: pointer;
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 5px;
+    font-size: var(--font-xs);
+}
+
+footer form button:hover {
+    background-color: var(--color-primary);
+    color: white;
+    transition: ease-in-out .5s;
+}
+
+input, textarea {
+    border-width: 0 0 3px 0;
+}
+
+#button-up {
+    position: fixed;
+    color: var(--color-primary);
+    right: 1rem;
+    bottom: 1rem;
 }
 
 /* vectores */
@@ -157,28 +203,81 @@ main footer ul {
     top: 40vh;
     position: absolute;
     right: 0;
+    z-index: -1;
 }
 
 .vector-footer {
     width: 50%;
-    top: 294.4vh;
+    top: 344.4vh;
     position: absolute;
-    z-index: 100;
+    z-index: -1;
 }
 
 
 
 @media (max-width: 640px) {
-    section, header {
-        height: 50vh;
+    :root {
+        --color-primary: #33312E;
+        --color-secundary: #17A398;
+        --font-xl: 2.5rem;
+        --font-md: 2rem;
+        --font-s: 1.5rem;
+        --font-xs: 1rem;
+        --height-screen: 50vh;
     }
 
-    main footer {
-        height: 25vh;
+    h2 {
+        text-align: center;
     }
 
     .vector-footer {
         width: 50%;
-        top: 152vh
+        top: 179vh
+    }
+
+
+    .vector {
+        top: 30vh;
+    }
+
+
+    input, textarea, button {
+        margin-bottom: .5rem;
+        padding: .3rem;
+    }
+
+
+    #about div img {
+        visibility: hidden;
+    }
+
+    main footer ul {
+        margin: 1rem;
+    }
+
+    #about div {
+        margin: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    #about, #projects {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        top: 1rem;
+    }
+
+#projects {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+}
+
+    #projects div .project {
+        width: 50%;
+        order: 2;
     }
 }
+
+
