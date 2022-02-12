@@ -268,16 +268,14 @@ input, textarea {
         top: 1rem;
     }
 
-#projects {
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
-}
+    #projects {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
 
     #projects div .project {
         width: 50%;
         order: 2;
     }
 }
-
-
