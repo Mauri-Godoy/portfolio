@@ -1,5 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* VARIABLES */
+:root {
+    --color-primary: #33312E;
+    --color-secundary: #17A398;
+}
+
 body {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    font-weight: 500;
+    width: 100vw;
+    overflow-x: hidden;
     padding: 0;
 }
 
@@ -8,8 +22,8 @@ main {
     margin: 0;
     display: flex;
     flex-direction: column;
+  
 }
-
 
 section, header {
     height: 100vh;
@@ -17,7 +31,7 @@ section, header {
     border-color: black;
     border-width: 0 0 3px 0;
     margin: 0;
-    background-color: violet;
+    background-color: green;
 }
 
 
@@ -43,9 +57,19 @@ nav ul {
     justify-content: space-around;
 }
 
+nav li:hover {
+    transform: translateY(5px);
+    transition: ease-in-out .5s;
+}
+
+nav a:hover{
+    color: #33312ed2;
+}
+
 main header h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     background-color: red;
+    margin: 0;
 }
 
 mmain header h2 {
@@ -53,12 +77,23 @@ mmain header h2 {
     background-color: blue;
 }
 
+main header #subtitulo {
+    font-size: 3rem;
+    letter-spacing: .25rem;
+    color: var(--color-secundary);
+}
+
 a {
     text-decoration: none;
+    color: var(--color-primary);
+    margin: 0;
+    background-color: pink;
 }
 
 li {
     list-style: none;
+    margin: 0;
+    background-color: yellow;
 }
 
 /* about */
@@ -70,24 +105,49 @@ li {
     display: grid;
 }
 
+#about div {
+    margin: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
 #about div img {
-    width: 80%;
-    position: relative;
-    top: 0;
+    width: 50%;
+    position: absolute;
+    bottom: -100.6vh;
+    margin: 0;
+    right: 1rem;
 }
 
 /* projects */
+
+#projects div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 #projects div .project {
     width: 50%;
     height: 50%;
     border: solid 2px black;
 }
 
+
 /* footer */
 
 main footer {
     height: 50vh;
-    background-color: olive;
+    background-color: gray;
+    width: 100%;
+}
+
+main footer ul {
+    display: flex;
+    justify-content: space-between;
+    background-color: red;
+    padding: 1rem;
+    margin: 1rem;
 }
 
 /* vectores */
@@ -103,7 +163,6 @@ main footer {
     width: 50%;
     top: 294.4vh;
     position: absolute;
-    background-color: red;
     z-index: 100;
 }
 
@@ -120,5 +179,6 @@ main footer {
 
     .vector-footer {
         width: 50%;
-        top: 152vh }
+        top: 152vh
+    }
 }
