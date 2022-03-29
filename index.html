@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
     <title>Mauri Godoy - Portfolio</title>
 </head>
 
@@ -25,35 +28,56 @@
             <h2>Un &#60;<span id="subtitulo">Desarollador web</span>/&#62;</h2>
         </header>
 
+        <a id="button-up" href="#header"><i class="fas fa-arrow-up"></i></a>
+
         <section id="about">
             <div>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto enim et neque illo quaerat? Atque
-                    sunt enim saepe itaque fuga maxime consectetur, recusandae quia deleniti reprehenderit a nesciunt
-                    incidunt eaque!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate nesciunt eligendi sed ab quia,
-                    aliquid blanditiis dicta</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat unde autem eligendi, quibusdam,
-                    molestias quasi vel corrupti animi quam cum ipsum. Quos numquam illum commodi</p>
+                <p>
+                    Actualmente estoy en el Bootcamp de Full Stack Java Developer de MindHub, en el cual se simula un
+                    ambiente de trabajo tanto individual como grupal, realizando proyectos reales con condiciones de
+                    mínimo producto viable con metodología SCRUM. Completando cada producto en tiempos acotados por el
+                    cliente, tomando decisiones críticas y resolviendo los problemas de manera eficaz y concreta.
+                </p>
+                <p>Mis principales lenguajes de programación son JavaScript y Java. Además, para mis proyectos utilizo
+                    Tailwind, Vue y Spring Framework.</p>
+                <p>Estoy constantemente investigando y reforzando mis habilidades, y me caracterizo por mi
+                    responsabilidad y creatividad.</p>
             </div>
-            <div><img src="./assets/Services.svg" alt="vector"></div>
+            <div><img src="./assets/Services.png" alt="vector"></div>
         </section>
 
         <section id="projects">
             <div>
-                <h3>project</h3>
+                <div class="project">
+                    <a href="https://github.com/Mauri-Godoy/Homebanking" target="_blank">
+                        <img src="./assets/project.png" alt="project1">
+                    </a>
+                </div>
             </div>
             <div>
-                <div class="project"></div>
+                <h3>HomeBanking</h3>
             </div>
-
         </section>
 
         <footer id="contact">
             <ul>
-                <li><a href="#">adsda</a></li>
-                <li><a href="#">adsda</a></li>
-                <li><a href="#">adsda</a></li>
+                <li><a target="_blank" href="https://www.linkedin.com/in/mauri-godoy1/"><i class="fab fa-linkedin"></i>
+                        Linkedin</a></li>
+                <li><a target="_blank" href="https://github.com/Mauri-Godoy"><i class="fab fa-github"></i> GitHub</a>
+                </li>
+                <li><a target="_blank"
+                        href="https://drive.google.com/u/0/uc?id=1zhqGfI1uF76aLCHdpzgIbdZ9hzjCb4h7&export=download"
+                        download="CV - Mauricio Godoy"><i class="fas fa-file-download"></i> Descargar CV</a></li>
             </ul>
+
+            <form action="mailto:mauu.godoy01@gmail.com" method="post" enctype="text/plain" name="form">
+                <input id="nombre" type="text" name="name" placeholder="nombre">
+                <input id="email" type="email" name="email" placeholder="email">
+                <textarea name="message" id="mensaje" cols="25" rows="8" placeholder="mensaje"></textarea>
+                <button type="submit" value="Enviar!">Enviar</button>
+            </form>
+
+
         </footer>
 
     </main>
